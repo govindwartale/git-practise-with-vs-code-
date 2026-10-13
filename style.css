@@ -1,0 +1,55 @@
+/* 1. Global Reset & Variables */
+:root {
+  --primary-color: #3498db;
+  --text-color: #333333;
+  --bg-color: #f4f6f7;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Base Element Selectors */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* 3. Reusable Component (Card Class) */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 4. Flexbox Layout Container */
+.flex-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* 5. Responsive Design (Media Query) */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
